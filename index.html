@@ -8,17 +8,26 @@
 </head>
 <body>
   <div class="wrapper">
+
     <header>
-      <h1>Welcome to FlowBoard</h1>
+      <h1>Welcome to Flowboard</h1>
       <p>A tiny kanban for one-person productivity.</p>
     </header>
 
     <main>
+      <input type="text" id="task-input" placeholder="Enter a new task">
+      <button id="add-task-btn">Add Task</button>
+
       <div class="board">
         <div class="column" id="todo">
           <h2>To Do</h2>
-          <div class="task" draggable="true">Sample Task 1</div>
-          <div class="task" draggable="true">Sample Task 2</div>
+          <div class="task" draggable="true" id="task-1">
+            <div class="title">Sample Task</div>
+            <div class="task-wrapper">
+              <div class="description">This is a sample task description.</div>
+              <button class="delete-btn">Delete</button>
+            </div>
+          </div>
         </div>
         <div class="column" id="in-progress">
           <h2>In Progress</h2>
