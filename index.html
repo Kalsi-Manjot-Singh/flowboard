@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>FlowBoard</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Welcome to FlowBoard</h1>
+      <p>A tiny kanban for one-person productivity.</p>
+    </header>
+
+    <main>
+      <div class="board">
+        <div class="column" id="todo">
+          <h2>To Do</h2>
+          <div class="task" draggable="true">Sample Task 1</div>
+          <div class="task" draggable="true">Sample Task 2</div>
+        </div>
+        <div class="column" id="in-progress">
+          <h2>In Progress</h2>
+        </div>
+        <div class="column" id="done">
+          <h2>Done</h2>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
