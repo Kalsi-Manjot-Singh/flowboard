@@ -132,3 +132,7 @@ main {
 .task.dragging {
   opacity: 0.5;
 }
+
+.column.hovered {
+  background-color: #dfe6e9;
+}

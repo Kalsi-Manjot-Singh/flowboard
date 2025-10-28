@@ -1,13 +1,13 @@
-**FlowBoard** --- tiny kanban for one-person productivity. Built with vanilla HTML/CSS/JS. Drag cards between Backlog, TO DO TODAY, and Done. State persists to local storage. Ideal for quick daily planning.
+0**FlowBoard** --- tiny kanban for one-person productivity. Built with vanilla HTML/CSS/JS. Drag cards between Backlog, TO DO TODAY, and Done. State persists to local storage. Ideal for quick daily planning.
 
 Core MVP features (must-have)
 =============================
 
--   [ ] Three columns: **Backlog**, **TO DO TODAY**, **Done**
+-   [x] Three columns: **In Progress**, **TO DO TODAY**, **Done**
 
--   [ ] Add new task (title + optional note)
+-   [x] Add new task (title + optional note)
 
--   [ ] Card drag & drop between columns
+-   [x] Card drag & drop between columns
 
 -   [ ] Edit task title / delete task
 
