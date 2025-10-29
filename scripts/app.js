@@ -30,6 +30,15 @@ function addTask(title, description = '') {
   deleteBtn.onclick = () => task.remove();
   wrapper.appendChild(deleteBtn);
 
+  // Edit button
+  const editBtn = document.createElement("button");
+  editBtn.className = "edit-btn";
+  editBtn.textContent = "Edit";
+  editBtn.onclick = () => {
+    
+  };
+  wrapper.appendChild(editBtn);
+
   // Add wrapper to task
   task.appendChild(wrapper);
 
