@@ -1,146 +1,87 @@
+/* Defining color variables */
+:root {
+  /* colors */
+  --primary-01: #5927E5;
+  --primary-02: #8059EB;
+  --primary-03: #A489F1;
+  --primary-04: #C7B6F6;
+  --primary-05: #EAE4FC;
+  --complimentary-01: #FDE7FC;
+  --complimentary-02: #FDECFD;
+  --complimentary-03: #FEF1FD;
+  --complimentary-04: #FEF6FE;
+  --complimentary-05: #FFFAFE;
+  --accent-01: #241D30;
+  --accent-02: #544370;
+  --accent-03: #856FA9;
+  --accent-04: #BBAFCF;
+  --accent-05: #F1EFF5;
+  /* Text Styles */
+  /* Headings */
+  --heading-font-family: 'Alegreya Sans', sans-serif;
+  --paragraph-font-family: 'Alegreya', serif;
+}
+
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /*to exclude content box width/height in total width/height*/
 }
+
+/* Website Body Styles */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--complimentary-02);
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
 }
 
-.wrapper {
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
+/* The Website Container styless */
+/* .wrapper {
+  min-width: 1440px;
+} */
+
+.brand {
+  background-color: var(--complimentary-03);
+  padding-top: 1rem;
+  padding-left: 5.875rem;
+  /* margin-right: 1.938rem; */
+  padding-bottom: 1rem;
+}
+
+.logo {
+  font-family: var(--heading-font-family);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--primary-01), var(--accent-03));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 12px rgba(89, 39, 229, 0.15);
+}
+
+.subText {
+  font-family: var(--paragraph-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: var(--accent-02);
+  opacity: 0.85;
+  margin-top: 0.2rem;
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
 }
 
 
-header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-}
-
-main {
-  margin-top: 20px;
-}
-
-#task-input, #task-input2 {
-  width: 70%;
-  padding: 10px;
-  margin: 7px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-#task-input:focus, #task-input2:focus {
-  border-color: #4CAF50;
-  outline: none;
-}
-
-#task-input::placeholder, #task-input2::placeholder {
-  color: #999;
-}
-
-#task-input:hover, #task-input2:hover {
-  border-color: #4CAF50;
-}
-
-
-#add-task-btn {
-  padding: 10px 15px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-#add-task-btn:hover {
-  background-color: #45a049;
-}
-
-.board {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  gap: 10px;
-}
-
-.column {
-  background: #e2e4e6;
-  border-radius: 5px;
-  padding: 10px;
-  width: 32%;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-.column h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.task {
-  display:flex;
-  flex-direction: column;
-  background: white;
-  margin: 5px 5px;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-  cursor: grab;
-}
-
-.task .title {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.task .task-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.task .description {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.delete-btn, .edit-btn {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.edit-btn {
-  background-color: rgb(18, 170, 220);
-}
-
-.delete-btn:hover {
-  background-color: #c0392b;
-}
-
-.edit-btn:hover {
-  background-color: rgb(7, 95, 124);
-}
-
-.task:active {
-  cursor: grabbing;
-}
-
-.task.dragging {
-  opacity: 0.5;
-}
-
-.column.hovered {
-  background-color: #dfe6e9;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* starts 10px below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* ends at normal position */
+  }
 }
