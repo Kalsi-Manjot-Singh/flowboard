@@ -32,11 +32,17 @@
             <div class="add-icon">+</div>
           </div>
         </div>
-        <div class="task-card">
-          <div id="task-title">Complete research project</div>
-          <div id="task-description">Read LLMs can brainrot paper</div>
-          <div id="difficulty">Medium</div>
-          <div id="due-date">Nov 31, 2025</div>
+        <div class="task-card" draggable="true">
+          <div class="task-title">Complete research project</div>
+          <div class="task-description">Read LLMs can brainrot paper</div>
+          <div class="task-meta">
+            <div class="difficulty medium">Medium</div>
+            <div class="due-date">Nov 31, 2025</div>
+          </div>
+          <div class="task-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </div>
         </div>
       </div>
       <div class="column" id="progress">
@@ -49,7 +55,7 @@
             <div class="add-icon">+</div>
           </div>
         </div>
-        <div class="task-card"></div>
+
       </div>
       <div class="column" id="done">
         <div class="column-header">
@@ -60,9 +66,8 @@
           <div class="right">
             <div class="add-icon">+</div>
           </div>
-        <div class="task-card"></div>
-
         </div>
+
       </div>
     </div>
 

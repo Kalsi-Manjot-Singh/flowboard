@@ -187,6 +187,138 @@ body {
 
 /* Column Task card styles */
 
+.task-card {
+  background-color: var(--complimentary-05);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(89, 39, 229, 0.08),
+              0 1px 4px rgba(89, 39, 229, 0.06);
+  border-left: 4px solid var(--primary-01);
+  border-radius: 1rem;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px); /* lifts up slightly */
+  box-shadow: 0 4px 16px rgba(89, 39, 229, 0.12),
+              0 2px 8px rgba(89, 39, 229, 0.08);
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card.dragging {
+  opacity: 0.5;
+  transform: rotate(2deg); /* slight tilt when dragging */
+}
+
+.task-title {
+  font-family: var(--heading-font-family);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-01);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.task-description {
+  font-family: var(--paragraph-font-family);
+  font-size: 0.99rem;
+  font-weight: 400;
+  color: var(--accent-02);
+  line-height: 1.4;
+  margin-bottom:0.75rem;
+}
+
+.difficulty {
+  display: inline-block;
+  font-family: var(--heading-font-family);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem; /* pill shape */
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Color variants based on difficulty */
+.difficulty.easy {
+  background-color: #D1FAE5; /* light green */
+  color: #065F46; /* dark green */
+}
+
+.difficulty.medium {
+  background-color: #FEF3C7; /* light yellow */
+  color: #92400E; /* dark yellow/brown */
+}
+
+.difficulty.hard {
+  background-color: #FEE2E2; /* light red */
+  color: #991B1B; /* dark red */
+}
+
+.due-date {
+  display: inline-block;
+  font-family: var(--paragraph-font-family);
+  font-size: 0.85rem;
+  color: var(--accent-03);
+  font-style: italic;
+}
+
+.task-meta {
+  margin-bottom: 0.75rem;
+  margin-right: 1.75rem;
+  display: inline-block;
+}
+
+.task-actions {
+  display: inline-block;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  /* border-top: 1px solid rgba(89, 39, 229, 0.1); */
+}
+
+.task-card:hover .task-actions {
+  opacity: 1;
+}
+
+.edit-btn,
+.delete-btn {
+  font-family: var(--heading-font-family);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background-color: var(--primary-04);
+  color: var(--primary-01);
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-03);
+}
+
+.delete-btn {
+  background-color: var(--accent-05);
+  color: var(--accent-02);
+}
+
+.delete-btn:hover {
+  background-color: var(--accent-04);
+}
+
 
 
 
